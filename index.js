@@ -4,6 +4,10 @@
 module.exports = {
   name: 'ember-cli-framework7',
 
+  isDevelopingAddon: function() {
+    return true;
+  },
+
   included: function(app) {
     this.app = app;
     this._super.included(app);
