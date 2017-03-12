@@ -1,0 +1,20 @@
+<div class="item-inner">
+  {{#if label}}
+    <div class="item-title floating-label">{{label}}</div>
+  {{/if}}
+  <div class="item-input item-input-field">
+    {{#power-select-with-fallback
+      mustFallback=mustFallback
+      fallback-when=fallbackWhen
+      options=options
+      selected=selected
+      labelPath=property
+      onchange=onChange as |opt|}}
+      {{#if property}}
+        {{get opt property}}
+      {{else}}
+        {{opt}}
+      {{/if}}
+    {{/power-select-with-fallback}}
+  </div>
+</div>
