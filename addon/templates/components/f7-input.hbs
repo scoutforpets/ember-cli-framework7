@@ -1,0 +1,27 @@
+<div class="item-inner">
+  {{#if label}}
+    <div class="item-title floating-label">{{label}}</div>
+  {{/if}}
+  <div class="item-input item-input-field">
+    {{input
+      type=type
+      value=value
+      name=name
+      placeholder=placeholder
+      autofocus=autofocus
+      disabled=disabled
+      readonly=readonly
+      pattern=pattern
+      min=min
+      max=max
+      maxlength=maxlength
+      required=required
+      autocomplete=autocomplete
+      spellcheck=spellcheck
+      key-press=onKeyPress
+      key-down=onKeyDown
+      key-up=onKeyUp
+      focus-in=onFocusIn
+      focus-out=onFocusOut}}
+  </div>
+</div>
