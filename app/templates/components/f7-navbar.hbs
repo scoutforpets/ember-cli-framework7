@@ -1,1 +1,9 @@
-<div class="navbar-inner">{{yield}}</div>
+<div class="navbar-inner">
+  {{yield (hash
+    left=(component 'f7-navbar-left')
+    center=(component 'f7-navbar-center')
+    right=(component 'f7-navbar-right')
+  )}}
+</div>
+
+{{yield (hash sub-navbar=(component 'f7-sub-navbar'))}}
