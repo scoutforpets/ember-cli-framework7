@@ -8,7 +8,7 @@
       fallback-when=fallbackWhen
       options=options
       selected=selected
-      labelPath=property
+      labelPath=(if placeholder null property)
       onchange=onChange as |opt|}}
       {{#if property}}
         {{get opt property}}
