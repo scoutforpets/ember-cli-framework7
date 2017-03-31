@@ -21,7 +21,9 @@
         autocomplete=autocomplete
         spellcheck=spellcheck
         keyEvents=keyEvents
-        update=onChange}}
+        onfocus=onfocus
+        onblur=onblur
+        update=onchange}}
 
     {{else}}
 
@@ -41,9 +43,14 @@
         autocomplete=autocomplete
         spellcheck=spellcheck
         keyEvents=keyEvents
-        update=onChange}}
+        onfocus=onfocus
+        onblur=onblur
+        update=onchange}}
 
     {{/if}}
 
   </div>
+
+  {{yield}}
+
 </div>
