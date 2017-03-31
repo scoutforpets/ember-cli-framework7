@@ -20,8 +20,8 @@
     "ember-cli-babel": "^5.1.7",
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-node-assets": "0.1.6",
-    "framework7": "^1.5.2"
-    "ember-power-select-with-fallback": "0.2.3"
+    "framework7": "^1.5.2",
+    "ember-one-way-controls": "2.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
