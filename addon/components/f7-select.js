@@ -5,8 +5,6 @@ export default Ember.Component.extend({
   layout,
   classNames: ['item-content'],
 
-  mustFallback:true,
-  fallbackWhen: 'mobile',
   options: null,
   selected: null
 });

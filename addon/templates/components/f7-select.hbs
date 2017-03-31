@@ -3,18 +3,43 @@
     <div class="item-title floating-label">{{label}}</div>
   {{/if}}
   <div class="item-input item-input-field">
-    {{#power-select-with-fallback
-      mustFallback=mustFallback
-      fallback-when=fallbackWhen
-      options=options
-      selected=selected
-      labelPath=(if placeholder null property)
-      onchange=onChange as |opt|}}
-      {{#if property}}
-        {{get opt property}}
-      {{else}}
-        {{opt}}
-      {{/if}}
-    {{/power-select-with-fallback}}
+
+    {{#if hasBlock}}
+
+      {{#one-way-select
+        value=selected
+        options=options
+        includeBlank=includeBlank
+        required=required
+        tabindex=tabindex
+        disabled=disabled
+        multiple=multiple
+        optionValuePath=optionValuePath
+        optionLabelPath=optionLabelPath
+        optionTargetPath=optionTargetPath
+        optionComponent=optionComponent
+        groupLabelPath=groupLabelPath
+        update=onChange as |option index|}}
+        {{yield option index}}
+      {{/one-way-select}}
+
+    {{else}}
+      {{one-way-select
+        value=selected
+        options=options
+        includeBlank=includeBlank
+        required=required
+        tabindex=tabindex
+        disabled=disabled
+        multiple=multiple
+        optionValuePath=optionValuePath
+        optionLabelPath=optionLabelPath
+        optionTargetPath=optionTargetPath
+        optionComponent=optionComponent
+        groupLabelPath=groupLabelPath
+        promptIsSelectable=true
+        update=onChange}}
+
+    {{/if}}
   </div>
 </div>
