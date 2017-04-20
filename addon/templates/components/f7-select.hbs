@@ -4,42 +4,23 @@
   {{/if}}
   <div class="item-input item-input-field">
 
-    {{#if hasBlock}}
+    {{one-way-select
+      value=selected
+      options=options
+      includeBlank=includeBlank
+      required=required
+      tabindex=tabindex
+      disabled=disabled
+      multiple=multiple
+      optionValuePath=optionValuePath
+      optionLabelPath=optionLabelPath
+      optionTargetPath=optionTargetPath
+      optionComponent=optionComponent
+      groupLabelPath=groupLabelPath
+      onblur=onblur
+      update=onchange}}
 
-      {{#one-way-select
-        value=selected
-        options=options
-        includeBlank=includeBlank
-        required=required
-        tabindex=tabindex
-        disabled=disabled
-        multiple=multiple
-        optionValuePath=optionValuePath
-        optionLabelPath=optionLabelPath
-        optionTargetPath=optionTargetPath
-        optionComponent=optionComponent
-        groupLabelPath=groupLabelPath
-        update=onchange as |option index|}}
-        {{yield option index}}
-      {{/one-way-select}}
-
-    {{else}}
-      {{one-way-select
-        value=selected
-        options=options
-        includeBlank=includeBlank
-        required=required
-        tabindex=tabindex
-        disabled=disabled
-        multiple=multiple
-        optionValuePath=optionValuePath
-        optionLabelPath=optionLabelPath
-        optionTargetPath=optionTargetPath
-        optionComponent=optionComponent
-        groupLabelPath=groupLabelPath
-        promptIsSelectable=true
-        update=onchange}}
-
-    {{/if}}
   </div>
+
+  {{yield}}
 </div>
