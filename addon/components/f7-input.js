@@ -6,6 +6,9 @@ export default Ember.Component.extend({
   classNames: ['item-content'],
   classNameBindings: ['value:not-empty-state'],
 
+  autocorrect: false,
+  autocapitalize: false,
+
   type: 'text',
 
   isTextArea: Ember.computed('type', function() {
