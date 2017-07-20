@@ -7,7 +7,6 @@ export default Ember.Component.extend({
   classNameBindings: ['value:not-empty-state'],
 
   autocorrect: 'none',
-  autocapitalize: 'none',
 
   type: 'text',
 
